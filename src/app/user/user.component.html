@@ -1,0 +1,194 @@
+<div class="Main_div">
+
+  <h1> All Users </h1>
+
+<div class="user_div_info">
+
+  <table >
+
+    <tr>
+      <th>id</th>
+      <th>User-Name</th>
+      <th>Fresher</th>
+      <th>Activity</th>
+    </tr>
+
+<tbody *ngFor="let user of users">
+    <tr >
+
+      <td >{{user.id}}</td>
+      <td>{{user.user_name}}</td>
+      <td>{{user.Fresher}}</td>
+      <td><button (click)="showDetails(user)">Show Details</button></td>
+    </tr>
+
+  </tbody>
+
+  </table>
+
+<hr>
+  <button (click)="toggleAndSHowFresher()"
+  style="margin: 10px 20px;">
+  {{!isFresherButtonClicked?'show Fresher':'Close Tab'}}</button>
+
+<button (click)="toggleAndShowExperienced()"
+ style="margin: 10px 20px;"
+ >{{!isExperiencedButtonClicked?'Show Experienced':'Close Tab'}}</button>
+
+
+
+<button style="margin: 10px 20px;"
+ (click)="toggleAndShowFirstFiveRecords()"
+ >{{!firstFiveRecordClicked?'First 5 Records':'Close Tab'}}</button>
+
+<button style="margin: 10px 20px;"
+ (click)="toggAndShowleLastRecord()">
+ {{!isLastRecordButtonClicked?' Last Records':'Close Tab'}}</button>
+
+
+
+<!-- fresher table -->
+<div class="table-container" *ngIf="isFresherButtonClicked" #fresherTable>
+<h1>Fresher Details</h1>
+  <table >
+
+    <tr>
+      <th>id</th>
+      <th>User-Name</th>
+      <th>Fresher</th>
+      <th>Activity</th>
+
+    </tr>
+
+<tbody *ngFor="let user of onlyFreshers">
+    <tr >
+
+      <td >{{user.id}}</td>
+      <td>{{user.user_name}}</td>
+      <td>{{user.Fresher}}</td>
+      <td><button (click)="showDetails(user)">Show Details</button></td>
+    </tr>
+
+  </tbody>
+
+  </table>
+</div>
+
+<!-- Experienced Table -->
+
+<div *ngIf="isExperiencedButtonClicked">
+<h1>Experienced Details</h1>
+  <table >
+
+    <tr>
+      <th>id</th>
+      <th>User-Name</th>
+      <th>Fresher</th>
+      <th>Activity</th>
+    </tr>
+
+<tbody *ngFor="let user of onlyExp">
+    <tr >
+
+      <td >{{user.id}}</td>
+      <td>{{user.user_name}}</td>
+      <td>{{user.Fresher}}</td>
+      <td><button (click)="showDetails(user)">Show Details</button></td>
+    </tr>
+
+  </tbody>
+
+  </table>
+</div>
+
+<!-- firstFive -->
+<div *ngIf="firstFiveRecordClicked">
+<h1>First 5 records</h1>
+  <table >
+
+    <tr>
+      <th>id</th>
+      <th>User-Name</th>
+      <th>Fresher</th>
+      <th>Activity</th>
+    </tr>
+
+<tbody *ngFor="let user of firstFiveRecordArray">
+    <tr >
+
+      <td >{{user.id}}</td>
+      <td>{{user.user_name}}</td>
+      <td>{{user.Fresher}}</td>
+      <td><button (click)="showDetails(user)">Show Details</button></td>
+    </tr>
+
+  </tbody>
+
+  </table>
+</div>
+
+<!-- last record  -->
+
+<div *ngIf="isLastRecordButtonClicked">
+<h1>Last Record</h1>
+  <table >
+
+    <tr>
+      <th>id</th>
+      <th>User-Name</th>
+      <th>Fresher</th>
+      <th>Activity</th>
+    </tr>
+
+<tbody *ngFor="let user of lastrArray">
+    <tr >
+
+      <td >{{user.id}}</td>
+      <td>{{user.user_name}}</td>
+      <td>{{user.Fresher}}</td>
+      <td><button (click)="showDetails(user)">Show Details</button></td>
+    </tr>
+
+  </tbody>
+
+  </table>
+</div>
+
+
+
+
+
+</div>
+
+
+<!-- addUser  -->
+
+<!-- <div class="add_user">
+<h1>Add User</h1>
+<form #myForm="ngForm" (ngSubmit)="addrecord(myForm)">
+
+<label for="">user-name</label>
+<input type="text" name="user_name" ngModel>
+
+<label for="">age</label>
+<input type="number" name="" id="" name="age" ngModel>
+
+<label for="">user-Qualification</label>
+<input type="text" name="" id="" name="user_qualification" ngModel>
+
+<label for="">total-xperience</label>
+<input type="number" name="" id="" name="total_Experiece" ngModel>
+
+<label for="">Fresher</label>
+<input type="text" name="Fresher">
+
+<label for="">previous-company-name</label>
+<input type="text" name="previous_company_name" ngModel>
+
+<button type="button">Add User</button>
+
+</form>
+</div> -->
+
+
+  </div>

@@ -1,0 +1,15 @@
+.users_details{
+margin-top: 10px;
+height: auto;
+width: 60%;
+border: 1px solid black;
+}
+
+.user_details_div {
+margin: 10px;
+}
+
+.user_details_div h3{
+margin-bottom: 17px;
+}
+

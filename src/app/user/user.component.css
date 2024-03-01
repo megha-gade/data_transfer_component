@@ -1,0 +1,50 @@
+table{
+margin: auto;
+  border-collapse: collapse;
+padding:2px  16px;
+margin: 30px;
+border: 1px solid black;
+width: 90%;
+}
+tr,th,td{
+  border-collapse: collapse;
+  border: 1px solid black;
+text-align: center;
+
+}
+tr{
+height: 40px;
+
+
+}
+.Main_div{
+height: auto;
+width: 100%;
+
+}
+h1{
+text-align: center;
+padding-top: 20px;
+}
+
+button{
+cursor: pointer;
+font-weight: bold;
+color: aliceblue;
+height: 30px;
+padding:3px 10px;
+outline: none;
+border: none;
+background-color: darkolivegreen;
+width: 140px;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+
+color: black;
+  background-color: #cef2ce;
+}
+
+
+
